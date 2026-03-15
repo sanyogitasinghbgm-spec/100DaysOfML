@@ -95,9 +95,9 @@ print("Coefficients:", regressor.coef_)    # profit effect in each starstup case
 
 # Example:
 
-# Florida	NewYork	State
-# 0	0	California
-# 1	0	Florida
-# 0	1	NewYork
+# Florida	NewYork	 State
+# 0	          0	     California
+# 1	          0	     Florida
+# 0	          1	     NewYork
 
 # Isliye prediction par koi loss nahi hota.
