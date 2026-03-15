@@ -24,7 +24,7 @@ regressor = LinearRegression()
 regressor.fit(X_train, Y_train) #model training
 
 # Step 6: Predicting the test set results
-Y_pred = regressor.predict(X_test)  #predict the scores 
+Y_pred = regressor.predict(X_test)  #predict the scores using test set
 
 # Step 7: Visualize the training set results
 plt.scatter(X_train, Y_train, color='red')                  #red dots = real data
