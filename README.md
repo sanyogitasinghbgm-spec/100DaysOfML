@@ -61,3 +61,43 @@ Day2-SimpleLinearRegression/
 ├── studentscores.csv
 └── simple_linear_regression.py
 ```
+
+## Day 3 – Multiple Linear Regression
+
+### Goal
+Build a Multiple Linear Regression model to predict startup profit using multiple independent variables such as R&D Spend, Administration cost, Marketing Spend, and State.
+
+### Concepts Learned
+- Understanding Multiple Linear Regression
+- Working with datasets having multiple independent variables
+- Encoding categorical data (State column) using OneHotEncoder
+- Avoiding Dummy Variable Trap
+- Splitting dataset into training and testing sets
+- Training a Multiple Linear Regression model using LinearRegression
+- Predicting results for test data
+- Comparing Actual vs Predicted values
+- Evaluating model performance using R² Score
+
+### Key Idea
+Multiple Linear Regression is used when the prediction depends on more than one independent variable.
+
+Equation:
+
+y = b0 + b1x1 + b2x2 + b3x3 + ... + bnxn
+
+Where:
+
+- **x1**, **x2**, **x3** = independent variables (R&D Spend, Administration, Marketing Spend, State)
+- **y** = predicted value (Startup Profit)
+- **b0** = intercept
+- **b1**, **b2**, **b3** = coefficients that represent the impact of each feature on the prediction
+
+In this project, the model learns the relationship between startup investments and the resulting profit.
+
+### Files
+```
+Day3-MultipleLinearRegression/
+│
+├── 50_Startups.csv
+└── multiple_linear_regression.py
+```
