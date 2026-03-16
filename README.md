@@ -101,3 +101,57 @@ Day3-MultipleLinearRegression/
 ├── 50_Startups.csv
 └── multiple_linear_regression.py
 ```
+
+## Day 4 – Logistic Regression
+
+### Goal
+Build a Logistic Regression model to predict whether a user will purchase a product based on their Age and Estimated Salary.
+
+### Concepts Learned
+- Understanding Classification problems
+- Understanding Logistic Regression
+- Difference between Linear Regression and Logistic Regression
+- Splitting dataset into training and testing sets
+- Feature Scaling using StandardScaler
+- Training a Logistic Regression model using LogisticRegression
+- Predicting results for test data
+- Evaluating the model using Confusion Matrix
+- Evaluating performance using Accuracy, Precision, Recall and F1 Score
+- Visualizing the decision boundary
+
+### Key Idea
+Logistic Regression is used for **classification problems**, where the output variable is categorical (for example: Yes/No, True/False, 0/1).
+
+Instead of predicting a continuous value like Linear Regression, Logistic Regression predicts the **probability of a class**.
+
+The output probability is calculated using the **Sigmoid Function**.
+
+Equation:
+
+P = 1 / (1 + e^(-z))
+
+Where:
+
+z = b0 + b1x1 + b2x2
+
+- **x1** = Age
+- **x2** = Estimated Salary
+- **P** = Probability that the user will purchase the product
+
+If the probability is **greater than 0.5**, the model predicts:
+
+1 → User will purchase
+
+If the probability is **less than 0.5**, the model predicts:
+
+0 → User will not purchase
+
+The model also creates a **decision boundary**, which separates the two classes in the feature space.
+
+### Files
+```
+Day4-LogisticRegression/
+│
+├── Social_Network_Ads.csv
+└── logistic_regression.py
+```
