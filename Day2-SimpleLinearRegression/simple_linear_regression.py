@@ -4,7 +4,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Step 2: Load dataset
-dataset = pd.read_csv('student_scores.csv')
+dataset = pd.read_csv('studentscores.csv')
 
 # Step 3: Split independent and dependent variables
 X = dataset.iloc[:, :1].values  #X = input feature -- hours studied
