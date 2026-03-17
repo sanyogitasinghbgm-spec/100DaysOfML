@@ -58,9 +58,14 @@ Where:
 ```
 Day2-SimpleLinearRegression/
 │
+└── visualization
+     └── simple_linear_regression_testset.png
+     └── simple_linear_regression_trainingset.png
 ├── studentscores.csv
 └── simple_linear_regression.py
 ```
+
+---
 
 ## Day 3 – Multiple Linear Regression
 
@@ -101,6 +106,8 @@ Day3-MultipleLinearRegression/
 ├── 50_Startups.csv
 └── multiple_linear_regression.py
 ```
+
+---
 
 ## Day 4 – Logistic Regression
 
@@ -152,6 +159,76 @@ The model also creates a **decision boundary**, which separates the two classes 
 ```
 Day4-LogisticRegression/
 │
+└── visualization
+     └── logistic_regression_testset.png
+     └── logistic_regression_trainingset.py
 ├── Social_Network_Ads.csv
 └── logistic_regression.py
 ```
+
+---
+
+## Day 5 – K-Nearest Neighbors (KNN)
+
+### Goal
+Build a K-Nearest Neighbors (KNN) model to predict whether a user will purchase a product based on their Age and Estimated Salary.
+
+### Concepts Learned
+- Understanding K-Nearest Neighbors (KNN) algorithm
+- Difference between parametric and non-parametric models
+- Distance-based learning approach
+- Using Euclidean distance to find nearest neighbors
+- Splitting dataset into training and testing sets
+- Feature Scaling using StandardScaler
+- Training a KNN model using KNeighborsClassifier
+- Predicting results for test data
+- Evaluating the model using Confusion Matrix
+- Evaluating performance using Accuracy, Precision, Recall and F1 Score
+- Visualizing non-linear decision boundaries
+- Effect of different values of K (overfitting vs underfitting)
+
+### Key Idea
+K-Nearest Neighbors (KNN) is a **classification algorithm** that classifies a data point based on the majority class of its nearest neighbors.
+
+Unlike Logistic Regression, KNN does not learn an explicit equation. Instead, it stores the training data and makes predictions based on similarity (distance).
+
+The most commonly used distance metric is **Euclidean Distance**.
+
+Equation:
+
+distance = √((x1 - x2)² + (y1 - y2)²)
+
+Where:
+
+- **x1, y1** = coordinates of a new data point
+- **x2, y2** = coordinates of existing data points
+
+Working:
+
+- Choose a value of **K** (number of neighbors)
+- Find the **K nearest points** to the new data point
+- Perform **majority voting**
+- Assign the class with the highest votes
+
+Example:
+
+If K = 5 and among nearest neighbors:
+- 3 belong to class 1 (Purchased)
+- 2 belong to class 0 (Not Purchased)
+
+Then prediction → **1 (Purchased)**
+
+The decision boundary in KNN is **non-linear (zig-zag/curved)** because it depends on the local distribution of data points.
+
+### Files
+```
+Day5-KNearestNeighbors (KNN)/
+│
+├── visualization
+│     ├── knn_testsetset.png
+│     └── knn_trainingset.png
+├── Social_Network_Ads.csv
+└── knn.py
+```
+
+---
