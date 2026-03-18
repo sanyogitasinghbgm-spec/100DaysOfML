@@ -303,8 +303,10 @@ Common Kernels:
 Day6-SupportVectorMachine(SVM)/
 │
 ├── visualization
-│ ├── svm_testset.png
-│ └── svm_trainingset.png
+| ├── svm_curvedkernel_testset.png
+| ├── svm_curvedkernel_trainingset.png
+│ ├── svm_linearkernel_testset.png
+│ └── svm_linearkernel_trainingset.png
 ├── customer_subscription.csv
 └── svm.py
 ```
