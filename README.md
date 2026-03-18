@@ -232,3 +232,81 @@ Day5-KNearestNeighbors (KNN)/
 ```
 
 ---
+
+---
+
+## Day 6 – Support Vector Machine (SVM)
+
+### Goal
+Build a Support Vector Machine (SVM) model to predict whether a user will subscribe to a service based on their Age and Monthly Income.
+
+### Concepts Learned
+- Understanding Support Vector Machine (SVM)
+- Concept of hyperplane and margin
+- Understanding support vectors
+- Difference between linear and non-linear classification
+- Kernel trick (Linear vs RBF kernel)
+- Splitting dataset into training and testing sets
+- Feature Scaling using StandardScaler
+- Training an SVM model using SVC
+- Predicting results for test data
+- Evaluating the model using Confusion Matrix
+- Evaluating performance using Accuracy, Precision, Recall and F1 Score
+- Visualizing decision boundary
+- Effect of hyperparameters like C and gamma
+
+### Key Idea
+Support Vector Machine (SVM) is a **classification algorithm** that finds the optimal boundary (hyperplane) to separate different classes.
+
+Unlike Logistic Regression, which simply finds a boundary, SVM tries to find the **best possible boundary with maximum margin**.
+
+The margin is the distance between the hyperplane and the nearest data points from each class.
+
+These closest points are called **Support Vectors**.
+
+Equation (Hyperplane):
+
+w·x + b = 0
+
+Where:
+
+- **w** = weight vector
+- **x** = input features (Age, Income)
+- **b** = bias
+
+Working:
+
+- Find a hyperplane that separates the classes
+- Maximize the margin between the closest points of both classes
+- Use only critical points (support vectors) to define the boundary
+
+### Kernel Trick
+If the data is not linearly separable, SVM uses kernels to transform data into higher dimensions.
+
+**Model Observation:**
+- Linear Kernel → works well for linearly separable data
+- RBF Kernel → useful for complex/non-linear data
+- Increasing C → stricter boundary (less error, more overfitting)
+- Gamma → controls curvature of decision boundary
+
+Common Kernels:
+
+- **Linear Kernel** → straight line decision boundary
+- **RBF Kernel** → curved/non-linear boundary
+
+### Example
+- Linear SVM → draws a straight line to separate classes
+- RBF SVM → draws a curved boundary to better fit complex data
+
+### Files
+```
+Day6-SupportVectorMachine(SVM)/
+│
+├── visualization
+│ ├── svm_testset.png
+│ └── svm_trainingset.png
+├── customer_subscription.csv
+└── svm.py
+```
+
+---
