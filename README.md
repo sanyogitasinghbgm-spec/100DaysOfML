@@ -233,8 +233,6 @@ Day5-KNearestNeighbors (KNN)/
 
 ---
 
----
-
 ## Day 6 – Support Vector Machine (SVM)
 
 ### Goal
@@ -313,8 +311,6 @@ Day6-SupportVectorMachine(SVM)/
 
 ---
 
----
-
 ## Day 7 – Naive Bayes
 
 ### Goal
@@ -380,8 +376,6 @@ Day7-NaiveBayes/
 ├── spam_detection.csv
 └── naive.py
 ```
-
----
 
 ---
 
@@ -455,3 +449,6 @@ Day8-DecisionTree/
 ├── loan_data.csv
 └── dt.py
 ```
+
+---
+
