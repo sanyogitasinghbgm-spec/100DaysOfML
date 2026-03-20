@@ -381,6 +381,8 @@ Day7-NaiveBayes/
 
 ## Day 8 – Decision Tree
 
+![Decision Tree](visualization/decision_tree.png)
+
 ### Goal
 Build a Decision Tree model to predict whether a loan will be approved based on features like Age and Income.
 
