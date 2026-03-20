@@ -382,3 +382,76 @@ Day7-NaiveBayes/
 ```
 
 ---
+
+---
+
+## Day 8 – Decision Tree
+
+### Goal
+Build a Decision Tree model to predict whether a loan will be approved based on features like Age and Income.
+
+### Concepts Learned
+- Understanding Decision Tree algorithm
+- Concept of entropy and information gain
+- How decision trees split data based on conditions
+- Difference between linear and non-linear models
+- Splitting dataset into training and testing sets
+- Training a Decision Tree model using DecisionTreeClassifier
+- Predicting results for test data
+- Evaluating the model using Confusion Matrix
+- Evaluating performance using Accuracy
+- Visualizing decision boundaries
+- Understanding overfitting in decision trees
+- Controlling tree growth using max_depth
+
+### Key Idea
+Decision Tree is a **rule-based classification algorithm** that splits the dataset into smaller subsets based on feature conditions.
+
+It creates a tree-like structure where:
+- Each node represents a decision (condition)
+- Each branch represents the outcome of that decision
+- Each leaf node represents the final prediction
+
+The model chooses the best feature to split the data using **entropy** and **information gain**.
+
+Equation (Entropy):
+
+Entropy = -Σ pᵢ log₂(pᵢ)
+
+Where:
+
+- **pᵢ** = probability of class i
+
+Lower entropy means more pure (less mixed) data.
+
+### Working
+
+- Start from the root node (entire dataset)
+- Choose the best feature to split the data (based on entropy)
+- Split the dataset into subsets
+- Repeat the process recursively
+- Stop when data becomes pure or max depth is reached
+
+### Example
+
+- IF Income > 50000 → Loan Approved  
+- ELSE → Loan Not Approved  
+
+The tree keeps splitting data into smaller groups until it makes accurate predictions.
+
+### Model Observation
+- Decision Tree creates **non-linear boundaries**
+- Boundary looks like **boxes/rectangles**
+- Can easily overfit if tree grows too deep
+- Using **max_depth** helps control overfitting
+
+### Files
+```
+Day8-DecisionTree/
+│
+├── visualization
+│ └── dt_testset.png
+| └── dt_trainingset.png
+├── loan_data.csv
+└── dt.py
+```
