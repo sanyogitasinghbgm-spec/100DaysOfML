@@ -1,7 +1,10 @@
+import os
+os.environ["PATH"] += os.pathsep + r"C:\Program Files\Graphviz\bin"
 # Importing Libraries
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+
 
 # Import dataset
 dataset = pd.read_csv('loan_data.csv')
@@ -96,6 +99,72 @@ plt.xlabel('Age')
 plt.ylabel('Income')
 plt.legend()
 plt.show()
+
+from sklearn.tree import export_graphviz
+import graphviz
+
+# Feature names (important for labels)
+feature_names = ['Age', 'Income']
+
+# Export tree
+dot_data = export_graphviz(
+    classifier,
+    out_file=None,
+    feature_names=feature_names,
+    class_names=['Not Approved', 'Approved'],
+    filled=True,
+    rounded=True,
+    special_characters=True
+)
+
+# Create graph
+graph = graphviz.Source(dot_data)
+
+# Save as file
+from sklearn.tree import export_graphviz
+import graphviz
+
+# Feature names (important for labels)
+feature_names = ['Age', 'Income']
+
+# Export tree
+dot_data = export_graphviz(
+    classifier,
+    out_file=None,
+    feature_names=feature_names,
+    class_names=['Not Approved', 'Approved'],
+    filled=True,
+    rounded=True,
+    special_characters=True
+)
+
+# Create graph
+graph = graphviz.Source(dot_data)
+
+# Save as file
+from sklearn.tree import export_graphviz
+import graphviz
+
+# Feature names (important for labels)
+feature_names = ['Age', 'Income']
+
+# Export tree
+dot_data = export_graphviz(
+    classifier,
+    out_file=None,
+    feature_names=feature_names,
+    class_names=['Not Approved', 'Approved'],
+    filled=True,
+    rounded=True,
+    special_characters=True
+)
+
+# Create graph
+graph = graphviz.Source(dot_data)
+
+# Save as file
+graph.format = 'png'
+graph.render("decision_tree")
 
 # Entropy -- measure of randomness
 # Entropy=−∑pi​log2​(pi​) -- data kitna mixed hai
