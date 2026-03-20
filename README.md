@@ -312,3 +312,73 @@ Day6-SupportVectorMachine(SVM)/
 ```
 
 ---
+
+---
+
+## Day 7 – Naive Bayes
+
+### Goal
+Build a Naive Bayes model to classify whether an email is Spam or Not Spam based on features like message length and presence of certain keywords.
+
+### Concepts Learned
+- Understanding Naive Bayes algorithm
+- Understanding probability-based classification
+- Bayes Theorem intuition
+- Difference between Gaussian, Bernoulli and Multinomial Naive Bayes
+- Working with mixed data types (continuous + binary)
+- Splitting dataset into training and testing sets
+- Feature Scaling using StandardScaler
+- Training a Naive Bayes model using GaussianNB
+- Predicting results for test data
+- Evaluating the model using Confusion Matrix
+- Evaluating performance using Accuracy, Precision, Recall and F1 Score
+
+### Key Idea
+Naive Bayes is a **probability-based classification algorithm** based on Bayes Theorem.
+
+It calculates the probability of a class given the input features and predicts the class with the highest probability.
+
+The “naive” assumption is that all features are **independent of each other**, which simplifies computation.
+
+Bayes Theorem:
+
+P(A|B) = (P(B|A) * P(A)) / P(B)
+
+Where:
+
+- **P(A|B)** = probability of class A given features B
+- **P(B|A)** = likelihood of features given class
+- **P(A)** = prior probability of class
+- **P(B)** = probability of features
+
+### Types of Naive Bayes
+
+- **Gaussian NB** → used for continuous data (e.g., message length)
+- **Bernoulli NB** → used for binary data (0/1 features)
+- **Multinomial NB** → used for count/frequency data (e.g., word counts)
+
+### Working
+
+- Calculate probability of each class (Spam / Not Spam)
+- Compute likelihood of features for each class
+- Apply Bayes Theorem
+- Choose class with highest probability
+
+### Example
+
+- If email contains:
+  - link = 1
+  - offer = 1
+  - urgent = 1  
+
+→ high probability of being **Spam**
+
+### Files
+```
+Day7-NaiveBayes/
+│
+├── spam_detection.csv
+└── naive.py
+```
+
+---
