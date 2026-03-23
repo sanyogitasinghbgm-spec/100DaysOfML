@@ -454,3 +454,136 @@ Day8-DecisionTree/
 ```
 
 ---
+
+## Day 9 – Random Forest
+
+### Goal
+Build a Random Forest model to predict whether a loan will be approved based on features like Age and Income.
+
+### Concepts Learned
+- Understanding Random Forest algorithm
+- Difference between Decision Tree and Random Forest
+- Concept of ensemble learning
+- Bagging (Bootstrap Aggregation)
+- How multiple trees improve performance
+- Reducing overfitting using Random Forest
+- Splitting dataset into training and testing sets
+- Training model using RandomForestClassifier
+- Predicting results for test data
+- Evaluating the model using Confusion Matrix
+- Evaluating performance using Accuracy
+- Visualizing decision boundaries
+- Understanding bias vs variance tradeoff
+
+### Key Idea
+Random Forest is an **ensemble learning algorithm** that combines multiple Decision Trees to improve accuracy and reduce overfitting.
+
+It creates a forest of trees where:
+- Each tree is trained on random subsets of data
+- Each tree makes its own prediction
+- Final output is decided using **majority voting**
+
+This reduces variance and improves generalization.
+
+### Working
+
+- Select random samples from dataset (with replacement)
+- Train multiple Decision Trees on different subsets
+- Each tree learns different patterns
+- Collect predictions from all trees
+- Final prediction = **majority vote**
+
+### Example
+
+- Tree 1 → Approved  
+- Tree 2 → Not Approved  
+- Tree 3 → Approved  
+
+Final Output → **Approved**
+
+### Model Observation
+- Random Forest creates **non-linear boundaries**
+- Boundary looks like **multiple small rectangles combined**
+- Less overfitting compared to Decision Tree
+- More stable and accurate
+- Works well on large datasets
+
+### Files
+```
+Day9-RandomForest/
+│
+├── visualization
+│ └── rf_testset.png
+│ └── rf_trainingset.png
+├── loan_data.csv
+└── rf.py
+```
+
+---
+
+## Day 10 – Kernel SVM
+
+### Goal
+Build a Kernel SVM model to predict whether a loan will be approved based on features like Age and Income.
+
+### Concepts Learned
+- Understanding Support Vector Machine (SVM)
+- Difference between Linear SVM and Kernel SVM
+- Concept of maximum margin
+- Understanding support vectors
+- Kernel Trick (mapping to higher dimensions)
+- Types of kernels (Linear, Polynomial, RBF)
+- Importance of feature scaling in SVM
+- Hyperparameters: C and Gamma
+- Splitting dataset into training and testing sets
+- Training model using SVC
+- Predicting results for test data
+- Evaluating the model using Confusion Matrix
+- Evaluating performance using Accuracy
+- Visualizing decision boundaries
+
+### Key Idea
+Kernel SVM is a **powerful classification algorithm** that finds the best boundary (hyperplane) to separate classes with maximum margin.
+
+When data is not linearly separable:
+- It uses the **kernel trick** to transform data into higher dimensions
+- Then finds a linear boundary in that higher space
+
+This results in **non-linear decision boundaries** in original space.
+
+### Working
+
+- Scale the features (very important for SVM)
+- Map data into higher dimension using kernel function
+- Find optimal hyperplane with maximum margin
+- Identify support vectors (closest points to boundary)
+- Use these vectors to define decision boundary
+- Predict new data based on this boundary
+
+### Example
+
+- Points near boundary = Support Vectors  
+- Model focuses only on these points  
+
+Boundary is created such that margin is maximum
+
+### Model Observation
+- Kernel SVM creates **smooth non-linear boundaries**
+- Boundary looks like **curves (not boxes)**
+- Works well for complex datasets
+- Sensitive to feature scaling
+- Can overfit if gamma is too high
+- Slower compared to other models on large datasets
+
+### Files
+```
+Day10-KernelSVM/
+│
+├── visualization
+│ └── kerel_testset.png
+│ └── kernel_trainingset.png
+├── loan_data.csv
+└── kernel.py
+```
+
+---
